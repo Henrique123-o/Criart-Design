@@ -1,0 +1,633 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* menu */
+ ul i {
+    gap: 20px;
+ }
+
+
+a{
+    color: #fff;
+    text-decoration: none;
+    border: 2px solid #14343d;
+    background: #14343d;
+    border-radius: 20px;
+    
+ }
+
+
+
+ a:hover{
+    opacity: 0.7;
+ }
+
+
+ nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: #fff;
+    height: 15vh;
+ }
+
+ .nav-list{
+    list-style: none;
+    display: flex;
+ }
+
+ .nav-list li {
+    letter-spacing: 3px;
+    margin-left: 32px;
+ }
+
+ .mobile-menu{
+    display: none;
+    cursor: pointer;
+ }
+
+ .mobile-menu div{
+    width: 32px;
+    height: 2px;
+    background: #14343d;
+    margin: 8px;
+ }
+
+
+ @media (max-width: 999px) {
+
+    .nav-list{
+        margin-top: 35px;
+        position: absolute;
+        top: 8vh;
+        right: 0;
+        width: 100vw;
+        height: 92vh;
+        background: #14343d;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in;
+    }
+
+    .nav-list li {
+        margin-left: 0;
+        opacity: 0;
+    }
+
+    .mobile-menu{
+        display: block;
+    }
+
+    .nav-list.active{
+        transform: translateX(0);
+    }
+
+    @keyframes navLinkFade {
+        from {
+            opacity: 0;
+            transform: translateX(50px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+ }
+
+
+
+/* menu */
+
+/* banner */
+.banner{
+    
+    background: url(./img/banner.jpeg) no-repeat center center;
+    background-size: cover;
+    height: 100vh;
+   
+}
+/* banner */
+
+
+/*quem-somos */
+
+.quem-somos{
+    width: 100%;
+    height: 450px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    background: #14343d;
+}
+
+.texto1{
+    padding: 10px;
+    margin-top: 50px;
+    color: #fff;
+    width: 350px;
+    height: 300px;
+    font-size: 18px;
+}
+
+.texto2{
+    padding: 10px;
+    color: #fff;
+    width: 350px;
+    height: 300px;
+    font-size: 18px;
+}
+
+.imagem{
+    width: 350px;
+    height: 350px;
+}
+
+.amarelo{
+    color: #f0b91d;
+}
+
+.somos{
+    width: 100%;
+    border: 2px solid #14343d;
+    background: #14343d;
+}
+
+.somos h1 {
+    margin-top: 50px;
+    text-align: center;
+    background: #14343d;
+    color: #f0b91d;
+    font-size: 30px;
+}
+/*quem-somos fim */
+
+/* serviços inicio */
+
+.slider h1 {
+    text-align: center;
+    color: #14343d;
+    margin-top: 15px;
+}
+
+.slider{
+    margin: 0 auto;
+    width: 100%;
+    height: 140vh;
+    overflow: hidden;
+    margin-top: 15px;
+}
+
+.slides{
+    width: 400%;
+    height: 350px;
+    display: flex;
+
+}
+
+.slides input{
+    display: none;
+}
+
+
+.slide{
+  width: 25%;
+  position: relative;
+}
+
+.slide img{
+   width: 100%;
+}
+
+
+.manual-navigation{
+    position: relative;
+    width: 100%;
+    margin-top: 410px;
+    display: flex;
+    justify-content: center;
+}
+
+.manual-btn{
+    border: 3px solid #69b046;
+    padding: 10px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: .05s;
+}
+
+.manual-btn:not(:last-child){
+    margin-right: 30px;
+}
+
+.manual-btn:hover{
+    background-color: black;
+}
+
+#radio1:checked ~ .first{
+    margin-left: 0;
+}
+
+#radio2:checked ~ .first{
+    margin-left: -25%;
+}
+
+#radio3:checked ~ .first{
+    margin-left: -50%;
+}
+
+.navigation-auto div{
+    border: 2px solid #9ad293;
+    padding: 5px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: .05s;
+}
+
+/* serviços fim */
+
+
+
+/* vantagens */
+
+.vantagens{
+    background: #14343d;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 150px 20px;
+}
+
+.vantagens h1 {
+    color: #f0b91d;
+    font-size: 2rem;
+    margin-bottom: 50px;
+}
+
+.vantagens-itens{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin: 0px auto;
+}
+
+.vantagens-itens p {
+    text-align: center;
+    border: 1px solid white;
+    padding: 15px;
+    border-radius: 7px;
+    color: #fff;
+}
+
+.vantagens-contratar h1{
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 300px;
+    color: #f0b91d;
+    
+}
+
+.texto3 p{
+   color: #fff;
+   margin-top: 100px;
+   right: 300px;
+}
+
+.bloco2{
+    border: 2px solid #fff;
+    width: 150px;
+    border-radius: 20px;
+    margin-top: -190px;
+}
+
+.bloco2 p{
+    text-align: center;
+    margin-top: 20px;
+    color: #fff;
+    
+}
+
+.vantagens-j{
+    background: #14343d;
+    border: 1px solid #14343d;
+    width: 100%;
+    margin-top: 60px;
+    height: 200px;
+}
+
+
+.vantagens-j h1{
+    text-align: center;
+    background: #14343d;
+    font-size: 30px;
+    color: #f0b91d;
+    margin-top: 100px;
+}
+/* vantagens */
+
+/* duvidas */
+.duvidas{
+    height: 550px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.duvidas h1{
+    text-align: center;
+    margin-top: 40px;
+    color: #f0b91d;
+}
+
+.accordion {
+    background: #14343d;
+    color: #fff;
+    cursor: pointer;
+    padding: 18px;
+    width: 50%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s; 
+    margin-top: 20px;
+    border-radius: 30px;
+  }
+  
+  /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+  .active, .accordion:hover {
+    background: #14343d;
+  }
+  
+  /* Style the accordion panel. Note: hidden by default */
+  .panel {
+    padding: 0 18px;
+    background-color: white;
+    display: none;
+    overflow: hidden;
+    margin-top: 20px;
+  }
+
+
+
+ .panel {
+  padding: 0 18px;
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  margin-top: 20px;
+  
+}
+
+.accordion:after {
+    content: '\02795'; /* Unicode character for "plus" sign (+) */
+    font-size: 13px;
+    color: #777;
+    float: right;
+    margin-left: 5px;
+  }
+  
+  .active:after {
+    content: "\2796"; /* Unicode character for "minus" sign (-) */
+  }
+
+/* duvidas */
+
+/*depoimento*/
+.depoimento{
+    height: 600px;
+    background: #14343d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 70px;
+    
+}
+
+.foto{
+    border: 1px solid #14343d;
+    text-align: center;
+    background: #14343d;
+    color: #f0b91d;
+    height: 100px;
+    
+}
+
+.foto h1 {
+    margin-top: 50px;
+}
+
+.depoimento1{
+    width: 250px;
+    height: 250px;
+    margin-top: -200px;
+}
+
+/*depoimento*/
+
+/*formulario */
+
+/*Form */
+
+form {
+    font-family: Verdana,Tahoma,sans-serif;
+    font-size: 15px;
+    background-color: #FFFFFF;
+    max-width: 500px;
+    margin-top: 30px;
+    margin: 100px auto 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    margin-bottom: 20px;
+    margin-left: 20px;
+    
+}
+
+input, textarea {
+    width: 400px;
+    padding: 10px;
+    color: black;
+    margin-left: 20px;
+    margin-top: 10px;
+    border: 1px solid;
+    
+}
+
+input:hover, textarea:hover, input:focus, textarea:focus {
+    color:#14343d;
+    font-weight: bold;
+}
+
+.enviar {
+    background-color:#14343d;
+    height: 40px;
+    width: 100px;
+    font-weight: bold;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border: 1px solid;
+    color: #f0b91d;
+}
+
+textarea {
+    width: 400px;
+    height: 120px;
+    line-height: 20px;
+    max-width: 400px;
+}
+
+form label {
+    margin-left: 20px;
+    color: #FFFFFF;
+    font-weight: bold;
+}
+
+
+.titulo-produtos{
+        margin-top: 30px;
+        text-align: center;
+    
+}
+
+
+.whats{
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 9999;
+  }
+
+
+  
+  
+
+/*formulario */
+
+
+/*rodape */
+
+.rodape{
+    height: 300px;
+    margin-top: 20px;
+    background: #14343d;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    gap: 100px;
+    
+}
+
+.rod{
+    
+    width: 500px;
+    height: 200px;
+    color: #fff;
+    text-align: center;
+
+}
+
+.rod p{
+    line-height: 1.8rem;
+}
+
+.rodape img{
+    margin: 30px;
+}
+
+
+/*rodape */
+
+
+@media  (max-width: 700px) {
+    .banner{
+        width: 100%;
+        height: 200px;
+        z-index: 0;
+    }
+
+    .quem-somos{
+        width: 100%;
+        height: 60vh;
+    }
+
+    .texto1{
+        font-size: 10px;
+        margin-top: -70px;
+    }
+    
+    .texto2{
+        font-size: 10px;
+        margin-top: -100px;
+    }
+
+    .imagem img {
+       height: 200px;
+       width: 200px;
+       
+    }
+
+    .manual-navigation{
+        margin-top: 5px;
+    }
+
+    .slider{
+        width: 100%;
+        height: 80vh;
+    }
+
+    .vantagens-j h1{
+        font-size: 20px;
+    }
+
+    .vantagens{
+        width: 100%;
+        gap: 30px;
+
+    }
+
+    .vantagens-itens{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .bloco2 p {
+        font-size: 5px;
+
+    }
+
+    .depoimento{
+       
+        height: 250vh;
+        flex-direction: column;
+        gap: 250px;
+    }
+
+    .titulo h1{
+        margin-top: 30px;
+    }
+
+    .rod p  {
+        font-size: 10px;
+        line-height: 1rem;
+        
+    }
+
+    .foto  {
+        margin-top: 100px;
+    }
+}
